@@ -10,5 +10,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: nicetps
+      url: https://github.com/ardaasik/nicetps
+      revision: main
+      path: modules/nicetps
   self:
     path: config
