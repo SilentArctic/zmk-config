@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
@@ -31,7 +30,7 @@
     combos {
         compatible = "zmk,combos";
 
-        combos_quare_brackets {
+        combo_quare_brackets {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <21 22>;
             layers = <0>;
@@ -47,6 +46,11 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <9 10>;
             layers = <0>;
+        };
+
+        combo_ep_toggle {
+            bindings = <&ext_power EP_TOG>;
+            key-positions = <5 6>;
         };
     };
 
@@ -112,7 +116,7 @@
 &kp GRAVE  &kp N1  &kp N2              &kp N3              &kp N4              &kp N5                                         &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &none
 &kp ESC    &kp Q   &kp W               &kp E               &kp R               &kp T                                          &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
 &kp TAB    &kp A   &kp S               &kp D               &kp F               &kp G                                          &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &longpress LC(X) X  &longpress LC(C) C  &longpress LC(V) V  &kp B      &kp C_MUTE         &bl BL_TOG       &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT CAPSLOCK
+&kp LSHFT  &kp Z   &longpress LC(X) X  &longpress LC(C) C  &longpress LC(V) V  &kp B      &kp C_MUTE         &rgb_ug RGB_TOG  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT CAPSLOCK
                    &kp LGUI            &kp LALT            &kp LCTRL           &kp ENTER  &superlayer 1 1    &superlayer 2 2  &kp SPACE  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
