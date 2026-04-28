@@ -52,6 +52,12 @@
             bindings = <&ext_power EP_TOG>;
             key-positions = <5 6>;
         };
+
+        combo_go_back {
+            bindings = <&kp RA(LEFT_ARROW)>;
+            key-positions = <58 47>;
+            layers = <0 2>;
+        };
     };
 
     behaviors {
