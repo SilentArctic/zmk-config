@@ -172,11 +172,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                             &kp EQUAL     &kp SLASH     &kp ASTERISK  &kp MINUS       &kp PAGE_UP     &longpress RS(INSERT) INSERT
-&trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN                    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &kp PAGE_DOWN   &kp DELETE
-&trans  &trans  &trans  &trans  &trans  &kp K_APP                          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp HOME        &kp UP_ARROW    &kp END
-&trans  &trans  &trans  &trans  &trans  &trans           &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                &trans  &trans  &trans  &trans           &trans    &trans  &trans        &trans        &trans        &kp NUMBER_0
+&trans  &trans  &trans  &trans  &trans  &trans                             &kp EQUAL     &kp SLASH        &kp ASTERISK  &kp MINUS       &kp PAGE_UP     &longpress RS(INSERT) INSERT
+&trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN                    &kp NUMBER_7  &kp KP_NUMBER_8  &kp NUMBER_9  &kp PLUS        &kp PAGE_DOWN   &kp DELETE
+&trans  &trans  &trans  &trans  &trans  &kp K_APP                          &kp NUMBER_4  &kp NUMBER_5     &kp NUMBER_6  &kp HOME        &kp UP_ARROW    &kp END
+&trans  &trans  &trans  &trans  &trans  &trans           &trans    &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                &trans  &trans  &trans  &trans           &trans    &trans  &trans        &trans           &trans        &kp NUMBER_0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
