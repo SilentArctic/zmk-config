@@ -117,6 +117,16 @@
             #binding-cells = <0>;
             bindings = <&sl 1>, <&tog 1>;
         };
+
+        longpress_only: longpress_only {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONGPRESS_ONLY";
+            bindings = <&kp>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -133,10 +143,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1              &kp N2              &kp N3              &kp N4              &kp N5                                                      &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &none
-&kp ESC    &kp Q               &longpress LC(W) W  &kp E               &longpress LC(R) R  &longpress LC(LS(T)) T                                      &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB    &longpress LC(A) A  &kp S               &kp D               &kp F               &kp G                                                       &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z               &longpress LC(X) X  &longpress LC(C) C  &longpress LC(V) V  &kp B                   &kp C_MUTE         &rgb_ug RGB_TOG  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT CAPSLOCK
+&kp GRAVE  &kp N1              &kp N2              &kp N3              &kp N4              &kp N5                                                      &kp N6     &kp N7     &kp N8     &kp N9    &kp N0                  &none
+&kp ESC    &kp Q               &longpress LC(W) W  &kp E               &longpress LC(R) R  &longpress LC(LS(T)) T                                      &kp Y      &kp U      &kp I      &kp O     &kp P                   &kp BSPC
+&kp TAB    &longpress LC(A) A  &kp S               &kp D               &kp F               &kp G                                                       &kp H      &kp J      &kp K      &kp L     &longpress_only SEMI 0  &kp SQT
+&kp LSHFT  &kp Z               &longpress LC(X) X  &longpress LC(C) C  &longpress LC(V) V  &kp B                   &kp C_MUTE         &rgb_ug RGB_TOG  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH                &mt RSHFT CAPSLOCK
                                &kp LGUI            &kp LALT            &kp LCTRL           &kp ENTER               &layerTapDBTap1    &layerTapDBTap2  &kp SPACE  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
